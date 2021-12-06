@@ -1,0 +1,198 @@
+body {
+  overflow: hidden;
+  background-color: black;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+body #overlay > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FD7B62;
+  z-index: 10;
+}
+body #overlay > div.first {
+  top: 0;
+}
+body #overlay > div.second {
+  top: 33.3%;
+}
+body #overlay > div.third {
+  top: 66.6%;
+}
+body header {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body header > .row {
+  padding: 2rem 4rem;
+}
+body header > .row #header-options #header-phone {
+  display: inline-block;
+  padding: 1rem;
+  margin-right: 3rem;
+}
+body header > .row #header-burger img {
+  width: 3rem;
+}
+body header > .row #header-burger #burger-meat, body header > .row #header-burger #burger-salad {
+  opacity: 0;
+}
+body header > .row #header-burger #burger-tomato {
+  margin: 5px 0 0 0;
+}
+body header > .row #header-burger #burger-salad {
+  position: relative;
+}
+body #content {
+  height: 100vh;
+}
+body #content h1 {
+  font-size: 4rem;
+}
+body #content h1 sup {
+  color: #FD7B62;
+  font-size: 2.5rem;
+  top: -1.5rem;
+}
+body #content h1 span {
+  color: #FD7B62;
+}
+body #content h2 {
+  font-size: 5.25rem;
+}
+body #content h1, body #content h2 {
+  font-weight: 200;
+}
+body #content #funnel-questions {
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+body #content #funnel-questions a {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 2.5rem 4rem;
+  border-radius: 1.25rem;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+body #content #bullets {
+  width: 16rem;
+  margin: 5rem auto 0;
+  position: relative;
+}
+body #content #bullets > div:not(.line) {
+  background: linear-gradient(333deg, #fd7866 0%, #f45c8b 100%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+body #content #bullets > div:not(.line):not(:nth-child(3)) {
+  margin-right: 5rem;
+}
+body #content #bullets .line {
+  height: 1px;
+  background-color: #444444;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+
+.button-container-2 {
+  position: relative;
+  width: 351px;
+  height: 94px;
+  overflow: hidden;
+  border: 1px solid #000;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 1.25rem;
+}
+.button-container-2 button {
+  width: 101%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  background: white;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: black;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.button-container-2 button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+
+.mas {
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 101%;
+  position: absolute;
+  font-size: 1.25rem;
+  margin-top: 31px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+a {
+  color: #00ff95;
+}
