@@ -1,7 +1,7 @@
 require('./bootstrap');
 import { gsap } from "gsap";
 
-$('body').on('click', '.button-container-2', function(e) {
+$('body').on('click', '.button-container-1, .button-container-2, .button-container-3', function(e) {
     gsap.to('#content h1', {
         x: -20,
         opacity: 0,
@@ -24,7 +24,7 @@ $('body').on('click', '.button-container-2', function(e) {
         y: -10,
         opacity: 0,
         onComplete: function() {
-            $('#funnel-questions').html(`<div class="button-container-2">
+            $('#funnel-questions').html(`<div class="button-container-1">
             <span class="mas">Voir l'offre de services</span>
           <button type="button" name="Hover">Voir l'offre de services</button>
         </div>
@@ -32,65 +32,69 @@ $('body').on('click', '.button-container-2', function(e) {
             <span class="mas">Découvrir l'expertise</span>
           <button type="button" name="Hover">Découvrir l'expertise</button>
         </div>
-        <div class="button-container-2">
+        <div class="button-container-3">
             <span class="mas">Collaborer avec notre équipe</span>
           <button type="button" name="Hover">Collaborer avec notre équipe</button>
         </div>`);
-            
         }
     })
 
+    gsap.to('#bullets > div:nth-child(2) > div', {
+        delay: .8,
+        width: '100%',
+        height: '100%',
+        opacity: 1,
+        background: 'linear-gradient(333deg, #fd7866 0%, #f45c8b 100%)'
+    });
+
     gsap.to('#content h1', {
-        delay: 1,
+        delay: 1.4,
         x: 0,
         opacity: 1
     })
 
     gsap.to('#content h2', {
-        delay: 1.2,
+        delay: 1.6,
         x: 0,
         opacity: 1
     })
 
     gsap.to('#funnel-questions', {
-        delay: 1.9,
+        delay: 1.8,
         y: 0,
         opacity: 1,
     });
     
 });
 
-$('.button-container-2').mouseenter(function() {
+$('.button-container-1, .button-container-2, .button-container-3').mouseenter(function() {
     gsap.to($(this), {
         y: 7,
-        duration: .05
+        duration: .05,
+        border: '1px solid white'
     })
 });
 
-$('.button-container-2').mouseleave(function() {
+$('.button-container-1, .button-container-2, .button-container-3').mouseleave(function() {
     gsap.to($(this), {
         y: 0,
-        duration: .05
+        duration: .05,
+        border: '1px solid transparent'
     })
 });
 
 // phone hover
 $('#header-phone').mouseenter(function() {
-    $(this).addClass('hover');
-
     gsap.to('#header-phone', {
         yoyo: true,
-        repeat: 5,
-        x: '+=4',
-        rotate: '15deg',
-        duration: .07
+        repeat: 3,
+        rotate: '12deg',
+        duration: .08
     })
 })
 
 // burger hover
 $('#header-burger').mouseenter(function() {
-    $(this).addClass('hover');
-
     gsap.to('header #header-options #header-burger #burger-top', {
         y: -3
     })
@@ -98,17 +102,29 @@ $('#header-burger').mouseenter(function() {
     gsap.to('header #header-options #header-burger #burger-bottom', {
         y: 3
     })
+
+    gsap.to('header #header-options #header-burger #burger-salad', {
+        opacity: 1,
+        marginBottom: '3px',
+        left: 0,
+        transform: 'rotate(0)'
+    })
 })
 
-$('#header-burger').mouseout(function() {
-    $(this).removeClass('hover');
-
+$('#header-burger').mouseleave(function() {
     gsap.to('header #header-options #header-burger #burger-top', {
         y: 0
     })
     
     gsap.to('header #header-options #header-burger #burger-bottom', {
         y: 0
+    })
+
+    gsap.to('header #header-options #header-burger #burger-salad', {
+        opacity: 0,
+        marginBottom: 0,
+        left: '5px',
+        transform: 'rotate(5deg)'
     })
 })
     
@@ -149,7 +165,40 @@ gsap.from('#content h2', {
     x: -20
 })
 
-gsap.from('#content #funnel-questions div', {
+gsap.to('#content h2', { 
+    delay: 4,
+    y:'-=8',
+    x:'+=2', 
+    rotation:'-=1',
+    duration: 6
+});
+
+gsap.to('#content h2', {
+    delay: 10, 
+    y:'+=5', 
+    x:'-=2',
+    rotation:'+=1',
+    duration: 10
+})
+
+gsap.to('#content h2', { 
+    delay: 20,
+    y:'-=8',
+    x:'+=2', 
+    rotation:'-=1',
+    duration: 6
+});
+
+gsap.to('#content h2', {
+    delay: 26, 
+    y:'+=5', 
+    x:'-=2',
+    rotation:'+=1',
+    duration: 10
+})
+
+
+gsap.from('#content #funnel-questions div:not(.line)', {
     delay: 1.5,
     opacity: 0,
     x: -20,

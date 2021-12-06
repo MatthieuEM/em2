@@ -79,7 +79,7 @@
                     Pourquoi êtes-vous ici aujourd'hui?
                 </h2>
                 <div id="funnel-questions" class="d-flex justify-content-between align-items-center">
-                    <div class="button-container-2">
+                    <div class="button-container-1">
                         <span class="mas">Voir l'offre de services</span>
                       <button type="button" name="Hover">Voir l'offre de services</button>
                     </div>
@@ -87,15 +87,15 @@
                         <span class="mas">Découvrir l'expertise</span>
                       <button type="button" name="Hover">Découvrir l'expertise</button>
                     </div>
-                    <div class="button-container-2">
+                    <div class="button-container-3">
                         <span class="mas">Collaborer avec notre équipe</span>
                       <button type="button" name="Hover">Collaborer avec notre équipe</button>
                     </div>
                 </div>
                 <div id="bullets" class="d-flex justify-content-center align-items-center">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="active d-flex justify-content-center align-items-center"><div></div></div>
+                    <div class="d-flex justify-content-center align-items-center"><div></div></div>
+                    <div class="d-flex justify-content-center align-items-center"><div></div></div>
                     <div class="line"></div>
                 </div>
             </div>
